@@ -1,5 +1,6 @@
 import GlobalStyles from '@mui/material/GlobalStyles';
 import UsersHeader from './UsersHeader';
+import UsersTable from './UsersTable';
 
 
 function Users() {
@@ -14,6 +15,7 @@ function Users() {
 			/>
 			<div className="w-full h-full flex flex-col px-16">
 				<UsersHeader />
+				<UsersTable />
 			</div>
 		</>
 	);

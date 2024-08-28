@@ -12,6 +12,7 @@ const aliases = (prefix = `src`) => ({
   'app/configs': `${prefix}/app/configs`,
   'app/theme-layouts': `${prefix}/app/theme-layouts`,
   'app/AppContext': `${prefix}/app/AppContext`,
+  'app/interface-api':`${prefix}/app/interface-api`,
 });
 
 module.exports = aliases;
