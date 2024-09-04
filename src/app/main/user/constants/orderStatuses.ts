@@ -1,4 +1,6 @@
-import { EcommerceOrder } from '../../../main/user/api/ECommerceApi';
+import { EcommerceOrder } from '../../ECommerceApi';
+
+
 const orderStatuses: EcommerceOrder['status'] = [
     {
 		id: '1',
@@ -70,4 +72,6 @@ const orderStatuses: EcommerceOrder['status'] = [
 		name: 'Awaiting Cash-on-delivery payment',
 		color: 'bg-blue-800 text-white'
 	}
-]
+];
+
+export default orderStatuses;

@@ -1,5 +1,4 @@
 import { apiService as api } from 'app/store/apiService';
-import { PartialDeep } from 'type-fest';
 
 export const addTagTypes = ['eCommerce_products', 'eCommerce_product', 'eCommerce_orders', 'eCommerce_order'] as const;
 
