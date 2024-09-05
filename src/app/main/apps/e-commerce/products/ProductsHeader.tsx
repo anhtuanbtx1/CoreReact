@@ -6,7 +6,10 @@ import NavLinkAdapter from '@fuse/core/NavLinkAdapter';
 import useThemeMediaQuery from '@fuse/hooks/useThemeMediaQuery';
 import PageBreadcrumb from 'app/shared-components/PageBreadcrumb';
 
-function UsersHeader() {
+/**
+ * The products header.
+ */
+function ProductsHeader() {
 	const isMobile = useThemeMediaQuery((theme) => theme.breakpoints.down('lg'));
 
 	return (
@@ -17,7 +20,7 @@ function UsersHeader() {
 			>
 				<div>
 					<PageBreadcrumb className="mb-8" />
-					<Typography className="text-4xl font-extrabold leading-none tracking-tight">Danh sách người dùng</Typography>
+					<Typography className="text-4xl font-extrabold leading-none tracking-tight">Products</Typography>
 				</div>
 			</motion.span>
 
@@ -36,11 +39,12 @@ function UsersHeader() {
 						size={isMobile ? 'small' : 'medium'}
 					>
 						<FuseSvgIcon size={20}>heroicons-outline:plus</FuseSvgIcon>
-						<span className="mx-4 sm:mx-8">Thêm</span>
+						<span className="mx-4 sm:mx-8">Add</span>
 					</Button>
 				</motion.div>
 			</div>
 		</div>
 	);
 }
-export default UsersHeader;
+
+export default ProductsHeader;

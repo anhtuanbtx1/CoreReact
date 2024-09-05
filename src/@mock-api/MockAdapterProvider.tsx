@@ -4,6 +4,7 @@ import FuseSplashScreen from '@fuse/core/FuseSplashScreen';
 import { useAppDispatch } from 'app/store/hooks';
 import apiService from 'app/store/apiService';
 import ExtendedMockAdapter from './ExtendedMockAdapter';
+import { eCommerceApiMocks } from './api/ecommerce-api';
 import { authApiMocks } from './api/auth-api';
 
 const mockAdapterOptions = {
@@ -26,7 +27,7 @@ function MockAdapterProvider(props: MockAdapterProviderProps) {
 	const isInitialMount = useRef(true);
 	useEffect(() => {
 		const setupAllMocks = () => {
-			[authApiMocks].forEach((mockSetup) => {
+			[authApiMocks, eCommerceApiMocks].forEach((mockSetup) => {
 				mockSetup(mock);
 			});
 		};

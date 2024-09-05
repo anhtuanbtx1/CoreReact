@@ -1,8 +1,10 @@
 import { EcommerceOrder } from '../../ECommerceApi';
 
-
+/**
+ * The order statuses.
+ */
 const orderStatuses: EcommerceOrder['status'] = [
-    {
+	{
 		id: '1',
 		name: 'Awaiting check payment',
 		color: 'bg-blue text-white'

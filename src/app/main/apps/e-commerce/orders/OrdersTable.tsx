@@ -24,8 +24,8 @@ function OrdersTable() {
 				size: 64
 			},
 			{
-				accessorKey: 'reference',
-				header: 'Reference',
+				accessorKey: 'name',
+				header: 'Họ tên',
 				size: 64,
 				Cell: ({ row }) => (
 					<Typography
@@ -35,14 +35,27 @@ function OrdersTable() {
 						color="secondary"
 						role="button"
 					>
-						{row.original.reference}
+						{row.original.name}
 					</Typography>
 				)
 			},
 			{
 				id: 'customer',
 				accessorFn: (row) => `${row.customer.firstName} ${row.customer.lastName}`,
-				header: 'Customer'
+				header: 'CLB'
+			},
+			{
+				id: 'birthDate',
+				accessorFn: (row) => {
+					const date = new Date(row.birthDate.utcTime);
+					return `${(`0${  date.getDate()}`).slice(-2)}/${(`0${  date.getMonth() + 1}`).slice(-2)}/${date.getFullYear()}`;
+				},
+				header: 'Ngày sinh'
+			},
+			{
+				id: 'primaryTeam',
+				accessorFn: (row) => `${row.primaryTeam.teamName}`,
+				header: 'Team Name'
 			},
 			{
 				id: 'total',

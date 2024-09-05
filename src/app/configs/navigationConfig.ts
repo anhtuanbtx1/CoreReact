@@ -21,12 +21,40 @@ const navigationConfig: FuseNavItemType[] = [
 		url: 'example'
 	},
 	{
-		id: 'example-component1',
+		id: 'apps.ecommerce',
 		title: 'User',
+		type: 'collapse',
+		icon: 'heroicons-outline:shopping-cart',
 		translate: 'User',
-		type: 'item',
-		icon: 'heroicons-outline:user-circle',
-		url: 'user'
+		children: [
+			{
+				id: 'e-commerce-products',
+				title: 'Products',
+				type: 'item',
+				url: '/apps/e-commerce/products',
+				end: true
+			},
+			{
+				id: 'e-commerce-product-detail',
+				title: 'Product Detail',
+				type: 'item',
+				url: '/apps/e-commerce/products/1/a-walk-amongst-friends-canvas-print'
+			},
+			{
+				id: 'e-commerce-new-product',
+				title: 'New Product',
+				type: 'item',
+				url: '/apps/e-commerce/products/new'
+			},
+			{
+				id: 'e-commerce-orders',
+				title: 'Orders',
+				type: 'item',
+				url: '/apps/e-commerce/orders',
+				end: true
+			}
+			
+		]
 	}
 ];
 

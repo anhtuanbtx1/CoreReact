@@ -119,7 +119,7 @@ function DataTable<TData>(props: MaterialReactTableProps<TData>) {
 					showRowsPerPage: false
 				},
 				muiSearchTextFieldProps: {
-					placeholder: 'Search',
+					placeholder: 'Tìm kiếm',
 					sx: { minWidth: '300px' },
 					variant: 'outlined',
 					size: 'small'

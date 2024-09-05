@@ -1,9 +1,11 @@
 import GlobalStyles from '@mui/material/GlobalStyles';
-import UsersHeader from './UsersHeader';
-import UsersTable from './UsersTable';
+import OrdersHeader from './OrdersHeader';
+import OrdersTable from './OrdersTable';
 
-
-function Users() {
+/**
+ * The orders page.
+ */
+function Orders() {
 	return (
 		<>
 			<GlobalStyles
@@ -14,11 +16,11 @@ function Users() {
 				})}
 			/>
 			<div className="w-full h-full flex flex-col px-16">
-				<UsersHeader />
-				<UsersTable />
+				<OrdersHeader />
+				<OrdersTable />
 			</div>
 		</>
 	);
 }
 
-export default Users;
+export default Orders;
